@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Vision360 — Laboratoire — Elia Evih</title>
+  <meta name="description" content="Exploration UI/UX — Vision360, une piste d'interface immersive pour découvrir un lieu autrement. Concept en réflexion, non déployé." />
+  <meta name="theme-color" content="#f7f5ee" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Vision360 — Laboratoire — Elia Evih" />
+  <meta property="og:description" content="Exploration UI/UX — Vision360, une piste d'interface immersive pour découvrir un lieu autrement. Concept en réflexion, non déployé." />
+  <meta property="og:image" content="assets/img/hero-elia-720.webp" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <noscript><style>[data-reveal]{opacity:1!important;clip-path:none!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAVIGATION -->
+  <header class="site-header" id="header">
+    <div class="shell header__inner">
+      <a href="index.html#top" class="brand" aria-label="Elia Evih — retour en haut">
+        <span class="brand__mark" aria-hidden="true">E<span class="brand__dot"></span></span>
+        <span class="brand__text">
+          <span class="brand__name">Elia Evih</span>
+          <span class="brand__role">Fullstack &amp; UI/UX</span>
+        </span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <a href="index.html#manifeste">Manifeste</a>
+        <a href="index.html#profil">Profil</a>
+        <a href="index.html#expertise">Expertise</a>
+        <a href="index.html#projets">Projets</a>
+        <a href="index.html#laboratoire" class="is-active" aria-current="location">Laboratoire</a>
+        <a href="index.html#parcours">Parcours</a>
+        <a href="index.html#carnet">Carnet</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="mailto:evihelia.dev@gmail.com" class="header__mail">evihelia.dev@gmail.com</a>
+        <a href="index.html#contact" class="pill pill--dark header__cta">Discutons <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-haspopup="dialog" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="menu-toggle__label">Menu</span>
+          <span class="menu-toggle__bars" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <dialog class="menu-dialog" id="mobile-menu" aria-labelledby="mobile-menu-title">
+    <div class="menu-dialog__head">
+      <p class="eyebrow" id="mobile-menu-title"><span class="square" aria-hidden="true"></span>Navigation</p>
+      <button type="button" class="icon-btn menu-dialog__close" data-dialog-close aria-label="Fermer le menu">
+        <span aria-hidden="true">✕</span>
+      </button>
+    </div>
+    <nav class="menu-dialog__nav" aria-label="Navigation mobile">
+      <a href="index.html#manifeste"><span>01</span>Manifeste</a>
+      <a href="index.html#profil"><span>02</span>Profil</a>
+      <a href="index.html#expertise"><span>03</span>Expertise</a>
+      <a href="index.html#projets"><span>04</span>Projets</a>
+      <a href="index.html#laboratoire"><span>05</span>Laboratoire</a>
+      <a href="index.html#parcours"><span>06</span>Parcours</a>
+      <a href="index.html#carnet"><span>07</span>Carnet</a>
+      <a href="index.html#contact"><span>08</span>Contact</a>
+    </nav>
+    <div class="menu-dialog__foot">
+      <a href="mailto:evihelia.dev@gmail.com">evihelia.dev@gmail.com</a>
+      <p>Abidjan, Côte d'Ivoire</p>
+      <div class="menu-dialog__socials">
+        <a href="https://www.linkedin.com/in/elia0evih" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/eliaevih-sys" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://wa.me/2250749938656" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </dialog>
+
+  
+  <main id="main">
+
+    <article class="concept-page">
+      <div class="shell">
+        <a href="index.html#laboratoire" class="case-back"><span aria-hidden="true">←</span> Le laboratoire</a>
+
+        <header class="concept-head" data-reveal>
+          <p class="case-head__meta"><span>Exploration 01</span><span>Laboratoire</span><span>Concept</span></p>
+          <h1 class="concept-head__title">Vision360<span class="title-dot" aria-hidden="true"></span></h1>
+          <p class="concept-head__tagline">Voir un lieu comme un récit, pas comme une galerie.</p>
+        </header>
+
+        <figure class="concept-cover" data-reveal>
+          <div class="lab-visual lab-visual--vision concept-cover__art">
+          <span class="vision__ring vision__ring--1" aria-hidden="true"></span>
+          <span class="vision__ring vision__ring--2" aria-hidden="true"></span>
+          <span class="vision__ring vision__ring--3" aria-hidden="true"></span>
+          <span class="vision__cross" aria-hidden="true"></span>
+          <span class="vision__word" aria-hidden="true">360<span>°</span></span>
+          <span class="vision__meta">Visite immersive<br />Territoires &amp; récits</span>
+          <span class="vision__status">Concept</span>
+        </div>
+          <figcaption><span>Piste de réflexion</span><span>Maquette typographique — aucun déploiement</span></figcaption>
+        </figure>
+
+        <div class="concept-intro" data-reveal>
+          <p class="concept-intro__lead">Vision360 est une piste d'interface immersive pour découvrir un lieu autrement. Pas une galerie de photos : un récit spatial où le regard devient navigation.</p>
+          <p class="concept-intro__status"><span class="square" aria-hidden="true"></span>Concept en réflexion — aucun lieu partenaire, aucun prototype 3D réalisé.</p>
+        </div>
+
+        <dl class="case-facts" data-reveal>
+          <div><dt>Nature</dt><dd>Exploration personnelle</dd></div>
+          <div><dt>Statut</dt><dd>Concept — non déployé</dd></div>
+          <div><dt>Rôle</dt><dd>Design produit &amp; réflexion</dd></div>
+          <div><dt>Terrain</dt><dd>Design, code, données &amp; langues</dd></div>
+        </dl>
+
+        <section class="case-chapter" data-reveal>
+          <p class="case-chapter__label">L'hypothèse</p>
+          <div class="case-chapter__body">
+            <p class="case-chapter__lead">Sur le web, un lieu se découvre souvent dans une grille d'images. On regarde beaucoup, on comprend peu. Vision360 part d'une question simple : et si le déplacement dans une image pouvait raconter quelque chose ?</p>
+            <p class="case-chapter__note">L'idée n'est pas d'ajouter de la 3D partout, mais de choisir un mode de lecture : entrer par un détail, suivre une lumière, écouter une voix. La technologie doit servir le récit, pas devenir le sujet.</p>
+          </div>
+        </section>
+
+        <div class="concept-split" data-reveal>
+          <section>
+            <p class="case-chapter__label">Les intentions</p>
+            <ul class="concept-intentions">
+              <li><span aria-hidden="true"></span>Concevoir une navigation qui se comprend sans tutoriel.</li>
+              <li><span aria-hidden="true"></span>Prévoir une alternative accessible, sans 3D, pour le contenu essentiel.</li>
+              <li><span aria-hidden="true"></span>Relier chaque image à un fragment de contexte, pas seulement à une légende.</li>
+            </ul>
+          </section>
+          <section>
+            <p class="case-chapter__label">Questions ouvertes</p>
+            <ol class="concept-questions">
+              <li>Comment guider sans flèches visibles, tout en restant prévisible ?</li>
+              <li>Quel niveau de fidélité visuelle est nécessaire pour que le lieu reste crédible ?</li>
+              <li>Qui écrit le récit d'un lieu : le designer, le visiteur, l'habitant ?</li>
+            </ol>
+          </section>
+        </div>
+
+        <section class="concept-limit" data-reveal>
+          <p class="case-chapter__label">Ce que ce n'est pas</p>
+          <ul>
+            <li>Un produit de visite virtuelle finalisé.</li>
+            <li>Une étude utilisateur ou un partenariat avec un lieu.</li>
+          </ul>
+          <p>Présenter une exploration pour ce qu'elle est : une manière de chercher, pas une preuve de résultat.</p>
+        </section>
+
+        <a href="laboratoire-tradivoire.html" class="case-next">
+          <span class="case-next__meta">Exploration suivante</span>
+          <span class="case-next__title">TradIvoire</span>
+          <span class="case-next__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+
+  </main>
+
+<!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__top">
+        <a href="index.html#top" class="brand" aria-label="Elia Evih — retour en haut">
+          <span class="brand__mark" aria-hidden="true">E<span class="brand__dot"></span></span>
+          <span class="brand__text">
+            <span class="brand__name">Elia Evih</span>
+            <span class="brand__role">Abidjan, Côte d'Ivoire</span>
+          </span>
+        </a>
+
+        <nav class="footer__nav" aria-label="Navigation de pied de page">
+          <a href="index.html#manifeste">Manifeste</a>
+          <a href="index.html#profil">Profil</a>
+          <a href="index.html#projets">Projets</a>
+          <a href="index.html#laboratoire">Laboratoire</a>
+          <a href="index.html#parcours">Parcours</a>
+          <a href="index.html#carnet">Carnet</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="footer__contact">
+          <a href="mailto:evihelia.dev@gmail.com">evihelia.dev@gmail.com</a>
+          <a href="https://wa.me/2250749938656" target="_blank" rel="noopener">07 49 93 86 56</a>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/elia0evih" target="_blank" rel="noopener" aria-label="Profil LinkedIn d'Elia Evih" title="LinkedIn">in</a>
+            <a href="https://github.com/eliaevih-sys" target="_blank" rel="noopener" aria-label="Profil GitHub d'Elia Evih" title="GitHub">git</a>
+            <a href="https://wa.me/2250749938656" target="_blank" rel="noopener" aria-label="Contacter Elia Evih sur WhatsApp" title="WhatsApp">wa</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__wordmark" aria-hidden="true">Elia Evih<span class="footer__wordmark-dot"></span></div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Elia Evih Elienai Bérénice. Tous droits réservés.</p>
+        <p>Conçu &amp; développé à Abidjan — avec soin.</p>
+        <a href="index.html#top" class="footer__back">Retour en haut <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Nourrici — Marketplace alimentaire &amp; espace utilisateur — Elia Evih</title>
+  <meta name="description" content="Étude de cas UI/UX — marketplace de produits alimentaires locaux : catalogue, fiches produit, panier et tableau de bord utilisateur." />
+  <meta name="theme-color" content="#f7f5ee" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Nourrici — Marketplace alimentaire &amp; espace utilisateur — Elia Evih" />
+  <meta property="og:description" content="Étude de cas UI/UX — marketplace de produits alimentaires locaux : catalogue, fiches produit, panier et tableau de bord utilisateur." />
+  <meta property="og:image" content="assets/img/hero-elia-720.webp" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Instrument+Serif:ital@0;1&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
+  <noscript><style>[data-reveal]{opacity:1!important;clip-path:none!important;transform:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+<!-- NAVIGATION -->
+  <header class="site-header" id="header">
+    <div class="shell header__inner">
+      <a href="index.html#top" class="brand" aria-label="Elia Evih — retour en haut">
+        <span class="brand__mark" aria-hidden="true">E<span class="brand__dot"></span></span>
+        <span class="brand__text">
+          <span class="brand__name">Elia Evih</span>
+          <span class="brand__role">Fullstack &amp; UI/UX</span>
+        </span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <a href="index.html#manifeste">Manifeste</a>
+        <a href="index.html#profil">Profil</a>
+        <a href="index.html#expertise">Expertise</a>
+        <a href="index.html#projets" class="is-active" aria-current="location">Projets</a>
+        <a href="index.html#laboratoire">Laboratoire</a>
+        <a href="index.html#parcours">Parcours</a>
+        <a href="index.html#carnet">Carnet</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="mailto:evihelia.dev@gmail.com" class="header__mail">evihelia.dev@gmail.com</a>
+        <a href="index.html#contact" class="pill pill--dark header__cta">Discutons <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-haspopup="dialog" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="menu-toggle__label">Menu</span>
+          <span class="menu-toggle__bars" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <dialog class="menu-dialog" id="mobile-menu" aria-labelledby="mobile-menu-title">
+    <div class="menu-dialog__head">
+      <p class="eyebrow" id="mobile-menu-title"><span class="square" aria-hidden="true"></span>Navigation</p>
+      <button type="button" class="icon-btn menu-dialog__close" data-dialog-close aria-label="Fermer le menu">
+        <span aria-hidden="true">✕</span>
+      </button>
+    </div>
+    <nav class="menu-dialog__nav" aria-label="Navigation mobile">
+      <a href="index.html#manifeste"><span>01</span>Manifeste</a>
+      <a href="index.html#profil"><span>02</span>Profil</a>
+      <a href="index.html#expertise"><span>03</span>Expertise</a>
+      <a href="index.html#projets"><span>04</span>Projets</a>
+      <a href="index.html#laboratoire"><span>05</span>Laboratoire</a>
+      <a href="index.html#parcours"><span>06</span>Parcours</a>
+      <a href="index.html#carnet"><span>07</span>Carnet</a>
+      <a href="index.html#contact"><span>08</span>Contact</a>
+    </nav>
+    <div class="menu-dialog__foot">
+      <a href="mailto:evihelia.dev@gmail.com">evihelia.dev@gmail.com</a>
+      <p>Abidjan, Côte d'Ivoire</p>
+      <div class="menu-dialog__socials">
+        <a href="https://www.linkedin.com/in/elia0evih" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/eliaevih-sys" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://wa.me/2250749938656" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </dialog>
+
+  
+  <main id="main">
+
+    <article class="case-page">
+      <div class="shell">
+        <a href="index.html#projets" class="case-back"><span aria-hidden="true">←</span> Tous les projets</a>
+
+        <header class="case-head" data-reveal>
+          <div class="case-head__meta">
+            <span>Étude de cas 06</span>
+            <span>UI/UX Design</span>
+            <span>2024</span>
+          </div>
+          <h1 class="case-head__title">Nourrici<span class="title-dot" aria-hidden="true"></span></h1>
+          <div class="case-head__bottom">
+            <p class="case-head__subtitle">Marketplace alimentaire &amp; espace utilisateur</p>
+            <p class="case-head__intro">Concevoir une marketplace de produits alimentaires locaux qui inspire confiance, du premier catalogue jusqu'au panier. Une interface claire, cohérente et pensée pour des achats récurrents.</p>
+          </div>
+          
+        </header>
+
+        <figure class="case-media" data-reveal>
+      <img src="assets/img/nourrici-dashboard-1600.webp" srcset="assets/img/nourrici-dashboard-900.webp 900w, assets/img/nourrici-dashboard-1600.webp 1600w" sizes="100vw" width="1600" height="1531" alt="Tableau de bord utilisateur de la marketplace Nourrici" fetchpriority="high" decoding="async" />
+      <figcaption><span>Nourrici</span><span>Espace utilisateur — commandes et suivi</span></figcaption>
+    </figure>
+        <div class="case-gallery case-gallery--3" data-reveal>
+      <figure class="case-gallery__item">
+        <img src="assets/img/nourrici-catalog-1298.webp" srcset="assets/img/nourrici-catalog-900.webp 900w, assets/img/nourrici-catalog-1298.webp 1298w" sizes="100vw" width="1298" height="1600" alt="Catalogue de produits alimentaires Nourrici" loading="lazy" decoding="async" />
+        <figcaption><span>02</span>Catalogue et filtres</figcaption>
+      </figure>
+      <figure class="case-gallery__item">
+        <img src="assets/img/nourrici-product-1181.webp" srcset="assets/img/nourrici-product-900.webp 900w, assets/img/nourrici-product-1181.webp 1181w" sizes="100vw" width="1181" height="1600" alt="Fiche produit de la marketplace Nourrici" loading="lazy" decoding="async" />
+        <figcaption><span>03</span>Fiche produit</figcaption>
+      </figure>
+      <figure class="case-gallery__item">
+        <img src="assets/img/nourrici-cart-1242.webp" srcset="assets/img/nourrici-cart-900.webp 900w, assets/img/nourrici-cart-1242.webp 1242w" sizes="100vw" width="1242" height="1600" alt="Panier de la marketplace Nourrici" loading="lazy" decoding="async" />
+        <figcaption><span>04</span>Panier et récapitulatif</figcaption>
+      </figure>
+    </div>
+
+        <dl class="case-facts" data-reveal>
+          <div><dt>Année</dt><dd>2024</dd></div>
+          <div><dt>Rôle</dt><dd>UI/UX designer</dd></div>
+          <div><dt>Cadre</dt><dd>Projet de conception</dd></div>
+          <div><dt>Stack &amp; outils</dt><dd>Figma · E-commerce · Dashboard utilisateur</dd></div>
+        </dl>
+
+        <section class="case-chapter" data-reveal>
+          <p class="case-chapter__label">Le point de départ</p>
+          <div class="case-chapter__body">
+            <p class="case-chapter__lead">« Comment rendre des produits locaux désirables et rassurants sur un écran, sans surcharger les fiches, et faire tenir ensemble catalogue, panier et espace client dans un même langage ? »</p>
+            <p class="case-chapter__note">Le livrable est une conception Figma. La marketplace n'a pas été développée ni ouverte au public.</p>
+          </div>
+        </section>
+
+        <section class="case-chapter" data-reveal>
+          <p class="case-chapter__label">La démarche</p>
+          <div class="case-chapter__body">
+            <div class="case-steps">
+              <div class="case-step">
+                <span class="case-step__num">01</span>
+                <h2>Rendre le catalogue lisible</h2>
+                <p>Structurer les catégories, les filtres et les fiches produit autour des informations qui aident vraiment à choisir : origine, usage, prix, disponibilité.</p>
+              </div>
+              <div class="case-step">
+                <span class="case-step__num">02</span>
+                <h2>Simplifier le panier</h2>
+                <p>Réduire le nombre d'étapes et rendre les quantités, les totaux et les actions suivantes immédiatement compréhensibles.</p>
+              </div>
+              <div class="case-step">
+                <span class="case-step__num">03</span>
+                <h2>Unifier l'expérience</h2>
+                <p>Construire un design system e-commerce commun au catalogue, au panier et au tableau de bord utilisateur.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-outcome" data-reveal>
+          <section class="case-deliver">
+            <p class="case-chapter__label">Ce qui a été livré</p>
+            <ul>
+              <li>Catalogue et fiches produit</li>
+              <li>Parcours de panier simplifié</li>
+              <li>Tableau de bord utilisateur</li>
+              <li>Composants e-commerce réutilisables</li>
+            </ul>
+          </section>
+          <section class="case-result">
+            <p class="case-chapter__label">Le résultat, sans exagérer</p>
+            <p>Une conception de marketplace cohérente, qui montre comment un design system peut tenir ensemble les différents moments d'un parcours d'achat. Elle reste une base de conception, pas une boutique en ligne.</p>
+            <p class="case-result__note">Projet de conception — maquettes Figma, non développées.</p>
+          </section>
+        </div>
+
+        <a href="projet-mairie.html" class="case-next">
+          <span class="case-next__meta">Étude de cas suivante</span>
+          <span class="case-next__title">Mairie de Bonoua</span>
+          <span class="case-next__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+
+  </main>
+
+<!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="shell">
+      <div class="footer__top">
+        <a href="index.html#top" class="brand" aria-label="Elia Evih — retour en haut">
+          <span class="brand__mark" aria-hidden="true">E<span class="brand__dot"></span></span>
+          <span class="brand__text">
+            <span class="brand__name">Elia Evih</span>
+            <span class="brand__role">Abidjan, Côte d'Ivoire</span>
+          </span>
+        </a>
+
+        <nav class="footer__nav" aria-label="Navigation de pied de page">
+          <a href="index.html#manifeste">Manifeste</a>
+          <a href="index.html#profil">Profil</a>
+          <a href="index.html#projets">Projets</a>
+          <a href="index.html#laboratoire">Laboratoire</a>
+          <a href="index.html#parcours">Parcours</a>
+          <a href="index.html#carnet">Carnet</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="footer__contact">
+          <a href="mailto:evihelia.dev@gmail.com">evihelia.dev@gmail.com</a>
+          <a href="https://wa.me/2250749938656" target="_blank" rel="noopener">07 49 93 86 56</a>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/elia0evih" target="_blank" rel="noopener" aria-label="Profil LinkedIn d'Elia Evih" title="LinkedIn">in</a>
+            <a href="https://github.com/eliaevih-sys" target="_blank" rel="noopener" aria-label="Profil GitHub d'Elia Evih" title="GitHub">git</a>
+            <a href="https://wa.me/2250749938656" target="_blank" rel="noopener" aria-label="Contacter Elia Evih sur WhatsApp" title="WhatsApp">wa</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__wordmark" aria-hidden="true">Elia Evih<span class="footer__wordmark-dot"></span></div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> Elia Evih Elienai Bérénice. Tous droits réservés.</p>
+        <p>Conçu &amp; développé à Abidjan — avec soin.</p>
+        <a href="index.html#top" class="footer__back">Retour en haut <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

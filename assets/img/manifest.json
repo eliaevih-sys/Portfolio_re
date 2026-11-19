@@ -1,0 +1,374 @@
+[
+  {
+    "name": "hero-elia",
+    "src": "assets/images/apropos.jpeg",
+    "widths": [
+      {
+        "file": "assets/img/hero-elia-600.webp",
+        "width": 600,
+        "height": 1067,
+        "bytes": 62344
+      },
+      {
+        "file": "assets/img/hero-elia-720.webp",
+        "width": 720,
+        "height": 1280,
+        "bytes": 77536
+      }
+    ]
+  },
+  {
+    "name": "portrait-elia",
+    "src": "assets/images/portelia1 (2).jpeg",
+    "widths": [
+      {
+        "file": "assets/img/portrait-elia-600.webp",
+        "width": 600,
+        "height": 1051,
+        "bytes": 52812
+      },
+      {
+        "file": "assets/img/portrait-elia-731.webp",
+        "width": 731,
+        "height": 1280,
+        "bytes": 69636
+      }
+    ]
+  },
+  {
+    "name": "elia-desk",
+    "src": "assets/images/acceuil (2).jpeg",
+    "widths": [
+      {
+        "file": "assets/img/elia-desk-600.webp",
+        "width": 600,
+        "height": 400,
+        "bytes": 18542
+      },
+      {
+        "file": "assets/img/elia-desk-1200.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 41590
+      }
+    ]
+  },
+  {
+    "name": "elia-bio",
+    "src": "assets/images/Elia1.jpeg",
+    "widths": [
+      {
+        "file": "assets/img/elia-bio-600.webp",
+        "width": 600,
+        "height": 882,
+        "bytes": 43218
+      },
+      {
+        "file": "assets/img/elia-bio-720.webp",
+        "width": 720,
+        "height": 1058,
+        "bytes": 56960
+      }
+    ]
+  },
+  {
+    "name": "elia-profile",
+    "src": "assets/images/profile.jpg",
+    "widths": [
+      {
+        "file": "assets/img/elia-profile-600.webp",
+        "width": 600,
+        "height": 1051,
+        "bytes": 12866
+      },
+      {
+        "file": "assets/img/elia-profile-731.webp",
+        "width": 731,
+        "height": 1280,
+        "bytes": 18844
+      }
+    ]
+  },
+  {
+    "name": "mairie-home",
+    "src": "assets/Mairie Bonoua/acceuil mairie.png",
+    "widths": [
+      {
+        "file": "assets/img/mairie-home-900.webp",
+        "width": 900,
+        "height": 431,
+        "bytes": 99986
+      },
+      {
+        "file": "assets/img/mairie-home-1800.webp",
+        "width": 1800,
+        "height": 862,
+        "bytes": 267522
+      }
+    ]
+  },
+  {
+    "name": "mairie-services",
+    "src": "assets/Mairie Bonoua/E-services mairie.png",
+    "widths": [
+      {
+        "file": "assets/img/mairie-services-900.webp",
+        "width": 900,
+        "height": 428,
+        "bytes": 30038
+      },
+      {
+        "file": "assets/img/mairie-services-1800.webp",
+        "width": 1800,
+        "height": 856,
+        "bytes": 76716
+      }
+    ]
+  },
+  {
+    "name": "akwaba-home",
+    "src": "assets/Akwaba tech/akwaba.png",
+    "widths": [
+      {
+        "file": "assets/img/akwaba-home-900.webp",
+        "width": 900,
+        "height": 478,
+        "bytes": 38404
+      },
+      {
+        "file": "assets/img/akwaba-home-1601.webp",
+        "width": 1601,
+        "height": 850,
+        "bytes": 82706
+      }
+    ]
+  },
+  {
+    "name": "akwaba-2",
+    "src": "assets/Akwaba tech/akwaba2.png",
+    "widths": [
+      {
+        "file": "assets/img/akwaba-2-832.webp",
+        "width": 832,
+        "height": 811,
+        "bytes": 32248
+      }
+    ]
+  },
+  {
+    "name": "cafe-1",
+    "src": "assets/caféIvoire/ecran1.png",
+    "widths": [
+      {
+        "file": "assets/img/cafe-1-270.webp",
+        "width": 270,
+        "height": 783,
+        "bytes": 27052
+      }
+    ]
+  },
+  {
+    "name": "cafe-2",
+    "src": "assets/caféIvoire/ecran2.png",
+    "widths": [
+      {
+        "file": "assets/img/cafe-2-272.webp",
+        "width": 272,
+        "height": 831,
+        "bytes": 22844
+      }
+    ]
+  },
+  {
+    "name": "cafe-3",
+    "src": "assets/caféIvoire/ecran3.png",
+    "widths": [
+      {
+        "file": "assets/img/cafe-3-278.webp",
+        "width": 278,
+        "height": 782,
+        "bytes": 12696
+      }
+    ]
+  },
+  {
+    "name": "agrosmart-dashboard",
+    "src": "assets/agrosmart/agrosmart/tableau_de_bord_agricole_-_modern_ui/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/agrosmart-dashboard-900.webp",
+        "width": 900,
+        "height": 1005,
+        "bytes": 35074
+      },
+      {
+        "file": "assets/img/agrosmart-dashboard-1433.webp",
+        "width": 1433,
+        "height": 1600,
+        "bytes": 64908
+      }
+    ]
+  },
+  {
+    "name": "agrosmart-sensors",
+    "src": "assets/agrosmart/agrosmart/supervision_des_capteurs_-_grid_view/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/agrosmart-sensors-900.webp",
+        "width": 900,
+        "height": 805,
+        "bytes": 31244
+      },
+      {
+        "file": "assets/img/agrosmart-sensors-1600.webp",
+        "width": 1600,
+        "height": 1431,
+        "bytes": 69302
+      }
+    ]
+  },
+  {
+    "name": "agrosmart-users",
+    "src": "assets/agrosmart/agrosmart/formulaire_d'ajout_utilisateur_moderne_pro/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/agrosmart-users-900.webp",
+        "width": 900,
+        "height": 720,
+        "bytes": 14892
+      },
+      {
+        "file": "assets/img/agrosmart-users-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 33372
+      }
+    ]
+  },
+  {
+    "name": "sungrid-dashboard-1",
+    "src": "assets/sungrid/web/stitch_sungrid_web/sungrid_agent_dashboard_redesign_1/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/sungrid-dashboard-1-900.webp",
+        "width": 900,
+        "height": 764,
+        "bytes": 27360
+      },
+      {
+        "file": "assets/img/sungrid-dashboard-1-1600.webp",
+        "width": 1600,
+        "height": 1358,
+        "bytes": 57476
+      }
+    ]
+  },
+  {
+    "name": "sungrid-dashboard-2",
+    "src": "assets/sungrid/web/stitch_sungrid_web/sungrid_agent_dashboard_redesign_2/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/sungrid-dashboard-2-900.webp",
+        "width": 900,
+        "height": 977,
+        "bytes": 18330
+      },
+      {
+        "file": "assets/img/sungrid-dashboard-2-1474.webp",
+        "width": 1474,
+        "height": 1600,
+        "bytes": 37140
+      }
+    ]
+  },
+  {
+    "name": "sungrid-map",
+    "src": "assets/sungrid/web/stitch_sungrid_web/carte_des_installations_modernisée/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/sungrid-map-900.webp",
+        "width": 900,
+        "height": 720,
+        "bytes": 28312
+      },
+      {
+        "file": "assets/img/sungrid-map-1600.webp",
+        "width": 1600,
+        "height": 1280,
+        "bytes": 63348
+      }
+    ]
+  },
+  {
+    "name": "nourrici-dashboard",
+    "src": "assets/Nourrici/user_dashboard/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/nourrici-dashboard-900.webp",
+        "width": 900,
+        "height": 861,
+        "bytes": 43886
+      },
+      {
+        "file": "assets/img/nourrici-dashboard-1600.webp",
+        "width": 1600,
+        "height": 1531,
+        "bytes": 102642
+      }
+    ]
+  },
+  {
+    "name": "nourrici-catalog",
+    "src": "assets/Nourrici/marketplace_catalog/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/nourrici-catalog-900.webp",
+        "width": 900,
+        "height": 1109,
+        "bytes": 74962
+      },
+      {
+        "file": "assets/img/nourrici-catalog-1298.webp",
+        "width": 1298,
+        "height": 1600,
+        "bytes": 129802
+      }
+    ]
+  },
+  {
+    "name": "nourrici-product",
+    "src": "assets/Nourrici/nourrici_product_details/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/nourrici-product-900.webp",
+        "width": 900,
+        "height": 1219,
+        "bytes": 84378
+      },
+      {
+        "file": "assets/img/nourrici-product-1181.webp",
+        "width": 1181,
+        "height": 1600,
+        "bytes": 126442
+      }
+    ]
+  },
+  {
+    "name": "nourrici-cart",
+    "src": "assets/Nourrici/nourrici_shopping_cart/screen.png",
+    "widths": [
+      {
+        "file": "assets/img/nourrici-cart-900.webp",
+        "width": 900,
+        "height": 1159,
+        "bytes": 45914
+      },
+      {
+        "file": "assets/img/nourrici-cart-1242.webp",
+        "width": 1242,
+        "height": 1600,
+        "bytes": 74264
+      }
+    ]
+  }
+]
