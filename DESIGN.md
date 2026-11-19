@@ -32,6 +32,10 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
   Why: un dashboard est un vocabulaire d’outil, pas de portfolio ; il déplace l’attention vers des chiffres plutôt que vers le travail.
   <!-- 2026-11-19: « pas de dashboards » -->
 
+- **Le footer est un bloc de clôture cobalt plein format, après la section contact encre : une seule adresse email géante comme geste final, puis des métadonnées discrètes et un wordmark outlined ivoire. Pas de grille de liens ni de rangée d’icônes sociales.**
+  Why: une clôture monochrome avec un seul geste typographique marque la fin de la lecture ; multiplier les colonnes et les pastilles sociales redonne l’aspect template que le reste de la page évite.
+  <!-- 2026-11-19: « propose autre chose pour le footer ». Vérifié par `footer-check.mjs` : fond `rgb(0, 55, 255)`, email de 30 px à 320 px et 122 px à 1440 px, 3/2/1 colonnes, zéro débordement, focus ivoire, reduced motion sans translation. -->
+
 ## Motion
 
 - **Aucune animation d’interface ne dépasse 300 ms ; les retours de pression sont de 100 à 160 ms. Jamais `ease-in`, jamais `transition: all`. Utiliser `--ease-out: cubic-bezier(0.23, 1, 0.32, 1)` et `--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1)`. Le survol est conditionné à `@media (hover: hover) and (pointer: fine)`.**
