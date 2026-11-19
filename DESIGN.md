@@ -10,7 +10,7 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
 
 - **Toutes les couleurs viennent des tokens déclarés dans `:root` de `style.css` ; aucune valeur hexadécimale en dur dans le reste de la feuille.**
   Why: une couleur en dur échappe au système et crée des nuances concurrentes.
-  <!-- 2026-11-19: correction des valeurs héritées `#d9d5cb`, `#1a1c20`, `#4e4d47` et `#fff` vers les tokens. Vérifié par `node tools/check-design.mjs`. -->
+  <!-- 2026-11-19: correction des valeurs héritées `#d9d5cb`, `#1a1c20`, `#4e4d47` et `#fff` vers les tokens. Le lavis de survol utilise `--cobalt-wash`. Vérifié par `node tools/check-design.mjs`. -->
 
 ## Typography
 
@@ -26,7 +26,7 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
 
 - **Ne pas aligner trois cartes de taille identique, ni recourir à un gabarit de template générique. Utiliser des modules asymétriques et des tailles contrastées. Pour une liste de projets, employer l’index typographique `.index` avec panneau de prévisualisation, jamais une grille de cartes.**
   Why: la répétition mécanique fait reconnaître le gabarit avant le contenu ; l’index donne à chaque projet une ligne lisible et un statut explicite.
-  <!-- 2026-11-19: « éviter les templates génériques, trois cartes identiques » -->
+  <!-- 2026-11-19: « éviter les templates génériques, trois cartes identiques ». Le manifeste utilise depuis une liste en escalier (`.principles`) avec numéros outline et décalages progressifs. -->
 
 - **Ne pas représenter les projets sous forme de dashboard.**
   Why: un dashboard est un vocabulaire d’outil, pas de portfolio ; il déplace l’attention vers des chiffres plutôt que vers le travail.
@@ -44,7 +44,7 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
 
 - **Aucun stagger sur les lignes de l’index projets : l’état actif est instantané (180 ms), piloté par le survol ou le focus. Le panneau de prévisualisation change par fondu, sans réorganiser la page.**
   Why: une liste parcourue souvent ne doit pas faire attendre ; le survol et le focus partagent le même état.
-  <!-- 2026-11-19: règle des skills `animate` et `choreograph` du dépôt emilkowalski/skills. -->
+  <!-- 2026-11-19: règle des skills `animate` et `choreograph` du dépôt emilkowalski/skills. Le lavis `clip-path` et le repère `02 / 06` dans le panneau renforcent l'état actif sans déplacement de contenu. -->
 
 ## Interaction
 

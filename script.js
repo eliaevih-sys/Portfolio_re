@@ -250,18 +250,27 @@
     const links = Array.from(root.querySelectorAll("[data-index-link]"));
     const panels = Array.from(root.querySelectorAll("[data-index-panel]"));
     const label = root.querySelector("[data-index-label]");
+    const mark = root.querySelector("[data-index-mark]");
     if (!links.length) return;
+
+    const lastNum = links[links.length - 1].querySelector(".index__num");
+    const parsedTotal = lastNum ? parseInt(lastNum.textContent.trim(), 10) : NaN;
+    const total = String(Number.isFinite(parsedTotal) ? parsedTotal : links.length).padStart(2, "0");
 
     const activate = (index) => {
       links.forEach((link, i) => link.classList.toggle("is-active", i === index));
       panels.forEach((panel, i) => panel.classList.toggle("is-active", i === index));
-      if (!label) return;
+
       const num = links[index].querySelector(".index__num");
       const title = links[index].querySelector(".index__title");
-      label.textContent =
-        (num ? num.textContent.trim() : "") +
-        " — " +
-        (title ? title.textContent.trim() : "");
+      const number = num ? num.textContent.trim() : "";
+
+      if (label) {
+        label.textContent = number + " — " + (title ? title.textContent.trim() : "");
+      }
+      if (mark) {
+        mark.textContent = number + " / " + total;
+      }
     };
 
     activate(0);

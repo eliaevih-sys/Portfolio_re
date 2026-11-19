@@ -14,6 +14,7 @@
   --ink-soft: #292c34;
   --cobalt: #0037ff;
   --cobalt-deep: #0028c7;
+  --cobalt-wash: rgba(0, 55, 255, 0.05);
   --muted: #62645f;
   --muted-light: rgba(247, 245, 238, 0.68);
   --line: rgba(16, 18, 24, 0.16);
@@ -88,6 +89,7 @@ h4 {
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -0.045em;
+  font-optical-sizing: auto;
 }
 
 ul,
@@ -953,7 +955,7 @@ address {
 
 .hero__name--outline {
   color: transparent;
-  -webkit-text-stroke: 1.8px var(--ink);
+  -webkit-text-stroke: clamp(1.2px, 0.16vw, 2.2px) var(--ink);
 }
 
 .hero__title-dot {
@@ -1301,33 +1303,52 @@ address {
   color: var(--muted);
 }
 
+/* Trois lignes en escalier, pas trois cartes jumelles. */
 .principles {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.2rem, 2.5vw, 2.2rem);
+  grid-template-columns: minmax(0, 1fr);
+  border-top: 1px solid var(--ink);
 }
 
 .principle {
-  padding-top: 1rem;
-  border-top: 1px solid var(--ink);
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(4rem, 8vw, 7rem) minmax(0, 0.6fr) minmax(0, 1.4fr);
+  gap: clamp(1rem, 3vw, 3rem);
+  align-items: start;
+  padding: clamp(1.3rem, 2.6vw, 2.4rem) clamp(0.6rem, 1.5vw, 1.4rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.principle:nth-child(2) {
+  padding-left: clamp(1rem, 4vw, 4rem);
+}
+
+.principle:nth-child(3) {
+  padding-left: clamp(1.4rem, 8vw, 8rem);
 }
 
 .principle__num {
   display: block;
-  margin-bottom: 1.4rem;
-  font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--muted);
+  font-family: var(--sans);
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  font-weight: 900;
+  line-height: 0.75;
+  letter-spacing: -0.07em;
+  color: transparent;
+  -webkit-text-stroke: 1.4px var(--line-strong);
 }
 
 .principle h3 {
-  margin-bottom: 0.55rem;
-  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.05;
   letter-spacing: -0.03em;
 }
 
 .principle p {
+  max-width: 48ch;
   font-size: 0.8rem;
   line-height: 1.7;
   color: var(--muted);
@@ -3306,7 +3327,7 @@ address {
   }
 
   .expertise-row:hover {
-    background: rgba(31, 59, 255, 0.045);
+    background: var(--cobalt-wash);
   }
 
   .expertise-row:hover .expertise-row__mark {
@@ -3667,20 +3688,29 @@ address {
 
   .principles {
     grid-template-columns: 1fr;
-    gap: 0;
   }
 
   .principle {
-    padding-block: 1rem;
-    border-top: 1px solid var(--line);
+    grid-template-columns: clamp(2.6rem, 11vw, 4.2rem) minmax(0, 1fr);
+    gap: 0.5rem 1.2rem;
+    padding: 1.4rem 0;
   }
 
-  .principle:first-child {
-    border-top-color: var(--ink);
+  .principle:nth-child(2),
+  .principle:nth-child(3) {
+    padding-left: 0;
   }
 
   .principle__num {
-    margin-bottom: 0.7rem;
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
+
+  .principle h3 {
+    align-self: center;
+  }
+
+  .principle p {
+    grid-column: 2;
   }
 
   .lab-card--wide,
@@ -4879,6 +4909,7 @@ address {
 
 .index__link {
   position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 2.6rem minmax(0, 1fr) auto;
   grid-template-areas:
@@ -4888,6 +4919,26 @@ address {
   align-items: baseline;
   padding: clamp(1rem, 2vw, 1.7rem) clamp(0.8rem, 1.6vw, 1.4rem) clamp(1rem, 2vw, 1.7rem) 1.2rem;
   color: inherit;
+  transition: transform 0.12s var(--ease-out);
+}
+
+.index__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--sand);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.18s var(--ease-out);
+}
+
+.index__link.is-active::after {
+  clip-path: inset(0 0 0 0);
+}
+
+.index__link:active {
+  transform: scale(0.995);
+  transform-origin: left center;
 }
 
 .index__link::before {
@@ -4979,6 +5030,19 @@ address {
   background: var(--cobalt);
 }
 
+.index__frame-mark {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.42rem 0.6rem;
+  background: var(--cobalt);
+  color: var(--paper);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
 .index__visual {
   position: absolute;
   inset: 0;
@@ -5056,7 +5120,8 @@ address {
   }
 
   .index__link.is-active .index__title,
-  .index__link.is-active .index__arrow {
+  .index__link.is-active .index__arrow,
+  .index__link:active {
     transform: none;
   }
 }
