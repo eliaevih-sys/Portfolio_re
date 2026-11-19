@@ -4820,3 +4820,243 @@ address {
     transform: none;
   }
 }
+
+
+/* ==========================================================================
+   INDEX DES SIGNAUX — remplace la grille de cartes identiques
+   ========================================================================== */
+.index {
+  margin-top: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.index__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.index__hint {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.index__count {
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.index__count span {
+  color: var(--line-strong);
+}
+
+.index__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.index__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.index__item {
+  border-top: 1px solid var(--line);
+}
+
+.index__item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.index__link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr) auto;
+  grid-template-areas:
+    "num title arrow"
+    "num meta status";
+  gap: 0.4rem 1rem;
+  align-items: baseline;
+  padding: clamp(1rem, 2vw, 1.7rem) clamp(0.8rem, 1.6vw, 1.4rem) clamp(1rem, 2vw, 1.7rem) 1.2rem;
+  color: inherit;
+}
+
+.index__link::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: 0;
+  width: 3px;
+  background: var(--cobalt);
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 0.18s var(--ease-out);
+}
+
+.index__link.is-active::before {
+  transform: scaleY(1);
+}
+
+.index__num {
+  grid-area: num;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  transition: color 0.18s var(--ease-out);
+}
+
+.index__title {
+  grid-area: title;
+  font-family: var(--sans);
+  font-size: clamp(1.9rem, 4.4vw, 4.2rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  transition: color 0.18s var(--ease-out), transform 0.18s var(--ease-out);
+}
+
+.index__link.is-active .index__title {
+  color: var(--cobalt);
+  transform: translateX(0.6rem);
+}
+
+.index__link.is-active .index__num {
+  color: var(--cobalt);
+}
+
+.index__meta {
+  grid-area: meta;
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.index__status {
+  grid-area: status;
+  justify-self: end;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.index__arrow {
+  grid-area: arrow;
+  justify-self: end;
+  font-size: 1.1rem;
+  transition: transform 0.18s var(--ease-out);
+}
+
+.index__link.is-active .index__arrow {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.index__preview {
+  position: sticky;
+  top: calc(var(--header-h) + 1.5rem);
+}
+
+.index__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 0 var(--radius-one) 0 0;
+  background: var(--cobalt);
+}
+
+.index__visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.18s var(--ease-out), transform 0.22s var(--ease-out);
+}
+
+.index__visual.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.index__caption {
+  margin-top: 0.9rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Trait de signal : une seule entrée, au chargement ---------- */
+.hero__signal {
+  align-self: flex-start;
+  display: block;
+  width: clamp(5rem, 15vw, 13rem);
+  height: 3px;
+  margin-top: clamp(0.8rem, 1.6vw, 1.4rem);
+  background: var(--cobalt);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: signal-in 0.62s var(--ease-out) 0.22s forwards;
+}
+
+@keyframes signal-in {
+  to { transform: scaleX(1); }
+}
+
+/* ---------- Toucher : pas de panneau flottant, la ligne reste un lien ---------- */
+@media (max-width: 1000px), (hover: none) {
+  .index__layout {
+    display: block;
+  }
+
+  .index__preview {
+    display: none;
+  }
+
+  .index__title {
+    font-size: clamp(1.6rem, 6vw, 2.6rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .index__status {
+    display: none;
+  }
+
+  .index__link {
+    grid-template-areas:
+      "num title arrow"
+      "num meta meta";
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__signal {
+    animation: none;
+    transform: none;
+  }
+
+  .index__link.is-active .index__title,
+  .index__link.is-active .index__arrow {
+    transform: none;
+  }
+}

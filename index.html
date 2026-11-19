@@ -129,6 +129,7 @@
             <h1 class="hero__title" data-reveal>
               <span class="hero__name">Elia</span>
               <span class="hero__name hero__name--outline">Evih<span class="hero__title-dot" aria-hidden="true"></span></span>
+              <span class="hero__signal" aria-hidden="true"></span>
               <span class="sr-only">— Développeuse Fullstack &amp; Designer UI/UX</span>
             </h1>
 
@@ -423,105 +424,74 @@
         </article>
       </div>
 
-      <div class="carousel" data-carousel aria-label="Autres projets">
-        <div class="shell carousel__head">
+      <div class="index shell" data-signal-index aria-label="Autres projets">
+        <div class="index__head">
           <div>
-            <p class="micro-label">Autres terrains</p>
-            <p class="carousel__hint">Glissez, ou utilisez les flèches.</p>
+            <p class="micro-label">Index des signaux</p>
+            <p class="index__hint">Survolez ou sélectionnez une ligne pour voir le visuel.</p>
           </div>
-          <div class="carousel__controls">
-            <p class="carousel__count" aria-live="polite">
-              <span data-carousel-current>01</span><span class="carousel__count-sep" aria-hidden="true">—</span><span>05</span>
-            </p>
-            <button type="button" class="icon-btn" data-carousel-prev aria-label="Projet précédent">
-              <span aria-hidden="true">←</span>
-            </button>
-            <button type="button" class="icon-btn" data-carousel-next aria-label="Projet suivant">
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
+          <p class="index__count">05 <span aria-hidden="true">/</span> 06</p>
         </div>
 
-        <div class="carousel__viewport">
-          <div class="carousel__track" id="projects-track">
-            <a class="project-card" href="projet-akwaba.html" data-reveal>
-              <div class="project-card__media">
-                <img src="assets/img/akwaba-home-900.webp" width="900" height="478" alt="Page d'accueil du site Akwaba Tech Institute" loading="lazy" />
-                <span class="project-card__type">Étude de cas</span>
-              </div>
-              <div class="project-card__meta"><span>02</span><span>UI/UX &amp; front-end · 2025</span></div>
-              <h3 class="project-card__title">Akwaba Tech Institute</h3>
-              <p class="project-card__desc">Une vitrine institutionnelle pour un institut de formation technologique : identité, design system et prototype.</p>
-              <div class="project-card__foot">
-                <ul class="tags"><li>Figma</li><li>Design system</li></ul>
-                <span class="project-card__arrow" aria-hidden="true">↗</span>
-              </div>
-            </a>
+        <div class="index__layout">
+          <ol class="index__list">
+            <li class="index__item">
+              <a class="index__link" href="projet-akwaba.html" data-index-link>
+                <span class="index__num">02</span>
+                <span class="index__title">Akwaba Tech Institute</span>
+                <span class="index__meta">UI/UX &amp; front-end · 2025</span>
+                <span class="index__status">Étude de cas</span>
+                <span class="index__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="index__item">
+              <a class="index__link" href="projet-cafeivoire.html" data-index-link>
+                <span class="index__num">03</span>
+                <span class="index__title">CaféIvoire</span>
+                <span class="index__meta">Mobile UI/UX · 2025</span>
+                <span class="index__status">Étude de cas</span>
+                <span class="index__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="index__item">
+              <a class="index__link" href="projet-agrosmart.html" data-index-link>
+                <span class="index__num">04</span>
+                <span class="index__title">AgroSmart</span>
+                <span class="index__meta">UI/UX &amp; fullstack · 2024</span>
+                <span class="index__status">Étude de cas · en ligne</span>
+                <span class="index__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="index__item">
+              <a class="index__link" href="projet-sungrid.html" data-index-link>
+                <span class="index__num">05</span>
+                <span class="index__title">SunGrid</span>
+                <span class="index__meta">UI/UX Design · 2024</span>
+                <span class="index__status">Étude de cas</span>
+                <span class="index__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="index__item">
+              <a class="index__link" href="projet-nourrici.html" data-index-link>
+                <span class="index__num">06</span>
+                <span class="index__title">Nourrici</span>
+                <span class="index__meta">UI/UX Design · 2024</span>
+                <span class="index__status">Étude de cas</span>
+                <span class="index__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+          </ol>
 
-            <a class="project-card" href="projet-cafeivoire.html" data-reveal>
-              <div class="project-card__media project-card__media--phones">
-                <div class="phone-stack" aria-hidden="true">
-                  <img src="assets/img/cafe-3-278.webp" width="278" height="782" alt="" loading="lazy" />
-                  <img src="assets/img/cafe-1-270.webp" width="270" height="783" alt="" loading="lazy" />
-                  <img src="assets/img/cafe-2-272.webp" width="272" height="831" alt="" loading="lazy" />
-                </div>
-                <span class="project-card__type">Étude de cas</span>
-              </div>
-              <div class="project-card__meta"><span>03</span><span>Mobile UI/UX · 2025</span></div>
-              <h3 class="project-card__title">CaféIvoire</h3>
-              <p class="project-card__desc">Une application mobile e-commerce pour valoriser le café local, du catalogue au panier, prototypée dans Figma.</p>
-              <div class="project-card__foot">
-                <ul class="tags"><li>Figma Mobile</li><li>Prototype</li></ul>
-                <span class="project-card__arrow" aria-hidden="true">↗</span>
-              </div>
-            </a>
-
-            <a class="project-card" href="projet-agrosmart.html" data-reveal>
-              <div class="project-card__media">
-                <img src="assets/img/agrosmart-dashboard-900.webp" width="900" height="1005" alt="Tableau de bord de la solution agricole AgroSmart" loading="lazy" />
-                <span class="project-card__type">Étude de cas</span>
-              </div>
-              <div class="project-card__meta"><span>04</span><span>UI/UX &amp; fullstack · 2024</span></div>
-              <h3 class="project-card__title">AgroSmart</h3>
-              <p class="project-card__desc">Une solution agricole qui relie une application mobile terrain à un back-office web pour le suivi des récoltes.</p>
-              <div class="project-card__foot">
-                <ul class="tags"><li>Next.js</li><li>Node.js</li><li>MySQL</li></ul>
-                <span class="project-card__arrow" aria-hidden="true">↗</span>
-              </div>
-            </a>
-
-            <a class="project-card" href="projet-sungrid.html" data-reveal>
-              <div class="project-card__media">
-                <img src="assets/img/sungrid-dashboard-1-900.webp" width="900" height="764" alt="Tableau de bord de supervision énergétique SunGrid" loading="lazy" />
-                <span class="project-card__type">Étude de cas</span>
-              </div>
-              <div class="project-card__meta"><span>05</span><span>UI/UX Design · 2024</span></div>
-              <h3 class="project-card__title">SunGrid</h3>
-              <p class="project-card__desc">Une plateforme de supervision solaire qui hiérarchise l'information pour rendre les métriques lisibles et actionnables.</p>
-              <div class="project-card__foot">
-                <ul class="tags"><li>Figma</li><li>Dashboard UX</li></ul>
-                <span class="project-card__arrow" aria-hidden="true">↗</span>
-              </div>
-            </a>
-
-            <a class="project-card" href="projet-nourrici.html" data-reveal>
-              <div class="project-card__media">
-                <img src="assets/img/nourrici-catalog-900.webp" width="900" height="1109" alt="Catalogue de la marketplace alimentaire Nourrici" loading="lazy" />
-                <span class="project-card__type">Étude de cas</span>
-              </div>
-              <div class="project-card__meta"><span>06</span><span>UI/UX Design · 2024</span></div>
-              <h3 class="project-card__title">Nourrici</h3>
-              <p class="project-card__desc">Une marketplace alimentaire locale avec catalogue, fiches produit, panier et espace utilisateur cohérents.</p>
-              <div class="project-card__foot">
-                <ul class="tags"><li>Figma</li><li>E-commerce</li></ul>
-                <span class="project-card__arrow" aria-hidden="true">↗</span>
-              </div>
-            </a>
+          <div class="index__preview" aria-hidden="true">
+            <div class="index__frame">
+              <img class="index__visual is-active" data-index-panel="0" src="assets/img/akwaba-home-900.webp" width="900" height="478" alt="" loading="lazy" />
+              <img class="index__visual" data-index-panel="1" src="assets/img/cafe-1-270.webp" width="270" height="783" alt="" loading="lazy" />
+              <img class="index__visual" data-index-panel="2" src="assets/img/agrosmart-dashboard-900.webp" width="900" height="1005" alt="" loading="lazy" />
+              <img class="index__visual" data-index-panel="3" src="assets/img/sungrid-dashboard-1-900.webp" width="900" height="764" alt="" loading="lazy" />
+              <img class="index__visual" data-index-panel="4" src="assets/img/nourrici-catalog-900.webp" width="900" height="1109" alt="" loading="lazy" />
+            </div>
+            <p class="index__caption" data-index-label>02 — Akwaba Tech Institute</p>
           </div>
-        </div>
-        <div class="shell carousel__foot">
-          <p>Chaque projet a été documenté : contexte, problème, démarche et livrables.</p>
-          <a href="#contact" class="text-link">Un projet en tête ? Écrivons-le. <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>

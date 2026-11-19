@@ -30,7 +30,7 @@
     initMobileMenu();
     initDialogues();
     initReveals();
-    initCarousel();
+    initSignalIndex();
     initTicker();
     initContactForm();
     initCopyEmail();
@@ -242,103 +242,39 @@
     groups.forEach((_, trigger) => observer.observe(trigger));
   }
 
-  /* ---------- Carrousel projets ---------- */
-  function initCarousel() {
-    const root = document.querySelector("[data-carousel]");
+  /* ---------- Index des signaux ---------- */
+  function initSignalIndex() {
+    const root = document.querySelector("[data-signal-index]");
     if (!root) return;
 
-    const viewport = root.querySelector(".carousel__viewport");
-    const track = root.querySelector(".carousel__track");
-    const prev = root.querySelector("[data-carousel-prev]");
-    const next = root.querySelector("[data-carousel-next]");
-    const current = root.querySelector("[data-carousel-current]");
-    if (!viewport || !track) return;
+    const links = Array.from(root.querySelectorAll("[data-index-link]"));
+    const panels = Array.from(root.querySelectorAll("[data-index-panel]"));
+    const label = root.querySelector("[data-index-label]");
+    if (!links.length) return;
 
-    const cards = Array.from(track.querySelectorAll(".project-card"));
-    if (!cards.length) return;
-
-    const pad = () => {
-      const value = parseFloat(getComputedStyle(viewport).scrollPaddingLeft);
-      return Number.isFinite(value) ? value : 0;
+    const activate = (index) => {
+      links.forEach((link, i) => link.classList.toggle("is-active", i === index));
+      panels.forEach((panel, i) => panel.classList.toggle("is-active", i === index));
+      if (!label) return;
+      const num = links[index].querySelector(".index__num");
+      const title = links[index].querySelector(".index__title");
+      label.textContent =
+        (num ? num.textContent.trim() : "") +
+        " — " +
+        (title ? title.textContent.trim() : "");
     };
 
-    const currentIndex = () => {
-      const padding = pad();
-      let best = 0;
-      let min = Infinity;
-      cards.forEach((card, index) => {
-        const distance = Math.abs(card.offsetLeft - padding - viewport.scrollLeft);
-        if (distance < min) {
-          min = distance;
-          best = index;
-        }
-      });
-      return best;
-    };
+    activate(0);
 
-    const update = () => {
-      const index = currentIndex();
-      if (current) current.textContent = String(index + 1).padStart(2, "0");
-      if (prev) prev.disabled = index === 0;
-      if (next) next.disabled = index === cards.length - 1;
-    };
+    links.forEach((link, index) => {
+      link.addEventListener("focus", () => activate(index));
+      if (finePointer) link.addEventListener("pointerenter", () => activate(index));
+    });
 
-    const goTo = (index) => {
-      const target = cards[Math.max(0, Math.min(index, cards.length - 1))];
-      const left = Math.max(0, target.offsetLeft - pad());
-      viewport.scrollTo({
-        left,
-        behavior: reduceMotion ? "auto" : "smooth",
-      });
-    };
-
-    if (prev) {
-      prev.addEventListener("click", () => goTo(currentIndex() - 1));
-    }
-    if (next) {
-      next.addEventListener("click", () => goTo(currentIndex() + 1));
-    }
-
-    viewport.addEventListener("scroll", rafThrottle(update), { passive: true });
-    window.addEventListener("resize", rafThrottle(update));
-    update();
-
-    if (finePointer && !reduceMotion) {
-      // Permet le glisser-déposer à la souris sur les grands écrans.
-      let dragging = false;
-      let startX = 0;
-      let startScroll = 0;
-      let moved = false;
-
-      viewport.addEventListener("pointerdown", (event) => {
-        if (event.pointerType !== "mouse" || event.button !== 0) return;
-        dragging = true;
-        moved = false;
-        startX = event.clientX;
-        startScroll = viewport.scrollLeft;
-        viewport.classList.add("is-dragging");
-      });
-
-      window.addEventListener("pointermove", (event) => {
-        if (!dragging) return;
-        const delta = event.clientX - startX;
-        if (Math.abs(delta) > 4) moved = true;
-        viewport.scrollLeft = startScroll - delta;
-      });
-
-      window.addEventListener("pointerup", () => {
-        if (!dragging) return;
-        dragging = false;
-        viewport.classList.remove("is-dragging");
-      });
-
-      viewport.addEventListener("click", (event) => {
-        if (moved) {
-          event.preventDefault();
-          moved = false;
-        }
-      });
-    }
+    root.addEventListener("pointerleave", () => activate(0));
+    root.addEventListener("focusout", (event) => {
+      if (!root.contains(event.relatedTarget)) activate(0);
+    });
   }
 
   /* ---------- Bandeau défilant ---------- */

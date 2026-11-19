@@ -24,8 +24,8 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
   Why: la répétition d’un seul geste géométrique crée une signature ; les contours légers laissent respirer la couleur.
   <!-- 2026-11-19: « garder le style https://edithbrou.com/ ». Vérifié par `node tools/check-design.mjs`. -->
 
-- **Ne pas aligner trois cartes de taille identique, ni recourir à un gabarit de template générique. Utiliser des modules asymétriques et des tailles contrastées.**
-  Why: la répétition mécanique fait reconnaître le gabarit avant le contenu.
+- **Ne pas aligner trois cartes de taille identique, ni recourir à un gabarit de template générique. Utiliser des modules asymétriques et des tailles contrastées. Pour une liste de projets, employer l’index typographique `.index` avec panneau de prévisualisation, jamais une grille de cartes.**
+  Why: la répétition mécanique fait reconnaître le gabarit avant le contenu ; l’index donne à chaque projet une ligne lisible et un statut explicite.
   <!-- 2026-11-19: « éviter les templates génériques, trois cartes identiques » -->
 
 - **Ne pas représenter les projets sous forme de dashboard.**
@@ -38,9 +38,13 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
   Why: `ease-in` retarde le premier mouvement, celui que l’utilisateur regarde ; un survol non filtré se déclenche au toucher. Ces valeurs sont celles du dépôt `emilkowalski/skills` demandé par l’utilisateur.
   <!-- 2026-11-19: « pas d’animation excessive » ; « regarde aussi les règles du dépôt git https://github.com/emilkowalski/skills ». Vérifié par `node tools/check-design.mjs`. -->
 
-- **Une seule révélation par conteneur, avec un stagger court (0/55/95/145/190 ms). Pas de mouvement décoratif superflu.**
-  Why: le mouvement doit signaler une structure, pas devenir un bruit de fond.
-  <!-- 2026-11-19: « pas d’animation excessive » -->
+- **Une seule révélation par conteneur, avec un stagger court (0/55/95/145/190 ms). Pas de mouvement décoratif superflu. Seule exception : l’entrée du hero, vue une fois par visite, peut monter à 650 ms.**
+  Why: le mouvement doit signaler une structure, pas devenir un bruit de fond ; l’entrée du hero est un moment marketing, pas une interaction répétée.
+  <!-- 2026-11-19: « pas d’animation excessive » ; `.hero__signal` à 620 ms. -->
+
+- **Aucun stagger sur les lignes de l’index projets : l’état actif est instantané (180 ms), piloté par le survol ou le focus. Le panneau de prévisualisation change par fondu, sans réorganiser la page.**
+  Why: une liste parcourue souvent ne doit pas faire attendre ; le survol et le focus partagent le même état.
+  <!-- 2026-11-19: règle des skills `animate` et `choreograph` du dépôt emilkowalski/skills. -->
 
 ## Interaction
 
