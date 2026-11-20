@@ -36,6 +36,10 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
   Why: une clôture monochrome avec un seul geste typographique marque la fin de la lecture ; multiplier les colonnes et les pastilles sociales redonne l’aspect template que le reste de la page évite.
   <!-- 2026-11-19: « propose autre chose pour le footer ». Vérifié par `footer-check.mjs` : fond `rgb(0, 55, 255)`, email de 30 px à 320 px et 122 px à 1440 px, 2/1 colonnes, zéro débordement, focus ivoire, reduced motion sans translation. Le numéro de téléphone n'apparaît plus dans le footer (retrait de la colonne « Appeler » sur demande de l'utilisatrice le 2026-11-20). -->
 
+- **Les portraits du site viennent des quatre photos `Elia1` à `Elia4` : `Elia4` pour le hero (`hero-elia`), `Elia3` pour le profil (`portrait-elia`), `Elia2` pour la note de terrain (`elia-desk`, recadrée 3:2), `Elia1` pour le dialogue bio (`elia-bio`). Le manifeste `assets/img/manifest.json` est la source de vérité des fichiers WebP générés.**
+  Why: l'utilisatrice veut utiliser ses quatre photos et a demandé qu'`Elia4` remplace `apropos.jpeg`. Garder un seul manifeste évite que le `src` et le `srcset` d'une image divergent.
+  <!-- 2026-11-20: « Elia4.jpeg doit remplacer apropos ; je veux utiliser les images Elia1,2,3,4 ». Vérifié par `images-check.mjs` : quatre variantes chargées, dimensions conformes au manifeste. -->
+
 ## Motion
 
 - **Aucune animation d’interface ne dépasse 300 ms ; les retours de pression sont de 100 à 160 ms. Jamais `ease-in`, jamais `transition: all`. Utiliser `--ease-out: cubic-bezier(0.23, 1, 0.32, 1)` et `--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1)`. Le survol est conditionné à `@media (hover: hover) and (pointer: fine)`.**
@@ -55,6 +59,10 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
 - **Toute révélation au scroll observe un ancêtre pourvu d’une boîte mesurable. Ne jamais observer un parent en `display: contents`.**
   Why: `.hero__copy` est en `display: contents` sous 820 px ; l’`IntersectionObserver` n’y voit aucune surface et le H1 restait invisible.
   <!-- 2026-11-19: bug corrigé dans `script.js` après QA mobile. -->
+
+- **Le formulaire de contact transmet via EmailJS ; le `mailto:` n’est qu’un repli quand le SDK ou les identifiants manquent.**
+  Why: l’utilisatrice veut recevoir les messages directement dans sa boîte, sans dépendre de la messagerie du visiteur. Les identifiants restent dans un bloc unique en tête de `script.js` (`EMAILJS`), avec les variables de template `name`, `email`, `subject`, `message`.
+  <!-- 2026-11-20: « le message envoyer depuis le formulaire … doit aller dans mon mail ». Choix EmailJS confirmé par l'utilisatrice. -->
 
 ## Copy
 

@@ -9,6 +9,14 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
+  /* EmailJS — à renseigner avec les identifiants du compte de l'utilisatrice.
+     Tant que les trois valeurs sont vides, le formulaire retombe sur mailto. */
+  const EMAILJS = {
+    publicKey: "",
+    serviceId: "",
+    templateId: "",
+  };
+
   const rafThrottle = (fn) => {
     let queued = false;
     return (...args) => {
@@ -311,8 +319,12 @@
     if (!form) return;
 
     const status = form.querySelector(".contact-form__status");
+    const button = form.querySelector('button[type="submit"]');
+    const setStatus = (text) => {
+      if (status) status.textContent = text;
+    };
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       if (!form.checkValidity()) {
@@ -327,27 +339,64 @@
         String(data.get("subject") || "").trim() || "Contact portfolio — " + name;
       const message = String(data.get("message") || "").trim();
 
-      const body =
-        "Bonjour Elia,\n\n" +
-        message +
-        "\n\n—\n" +
-        name +
-        "\n" +
-        email +
-        "\n\n(Envoyé depuis le portfolio)";
+      const ready =
+        EMAILJS.publicKey &&
+        EMAILJS.serviceId &&
+        EMAILJS.templateId &&
+        window.emailjs &&
+        typeof window.emailjs.send === "function";
 
-      const mailto =
-        "mailto:evihelia.dev@gmail.com?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
+      if (!ready) {
+        /* Repli : la messagerie du visiteur s'ouvre avec le brouillon pré-rempli. */
+        const body =
+          "Bonjour Elia,\n\n" +
+          message +
+          "\n\n—\n" +
+          name +
+          "\n" +
+          email +
+          "\n\n(Envoyé depuis le portfolio)";
 
-      if (status) {
-        status.textContent =
-          "Votre messagerie va s'ouvrir avec le message pré-rempli. Envoyez-le pour finaliser.";
+        setStatus(
+          "Votre messagerie va s'ouvrir avec le message pré-rempli. Envoyez-le pour finaliser."
+        );
+        window.location.href =
+          "mailto:evihelia.dev@gmail.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+        return;
       }
 
-      window.location.href = mailto;
+      if (button) button.disabled = true;
+      setStatus("Envoi en cours…");
+
+      try {
+        await window.emailjs.send(
+          EMAILJS.serviceId,
+          EMAILJS.templateId,
+          {
+            name: name,
+            from_name: name,
+            email: email,
+            from_email: email,
+            reply_to: email,
+            subject: subject,
+            message: message,
+            to_name: "Elia",
+          },
+          { publicKey: EMAILJS.publicKey }
+        );
+
+        form.reset();
+        setStatus("Votre message a bien été envoyé. Je vous réponds dès que possible.");
+      } catch (error) {
+        setStatus(
+          "L'envoi a échoué. Réessayez ou écrivez-moi à evihelia.dev@gmail.com."
+        );
+      } finally {
+        if (button) button.disabled = false;
+      }
     });
   }
 

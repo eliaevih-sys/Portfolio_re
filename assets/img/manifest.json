@@ -1,55 +1,55 @@
 [
   {
     "name": "hero-elia",
-    "src": "assets/images/apropos.jpeg",
+    "src": "assets/images/Elia4.jpeg",
     "widths": [
       {
         "file": "assets/img/hero-elia-600.webp",
         "width": 600,
         "height": 1067,
-        "bytes": 62344
+        "bytes": 38328
       },
       {
         "file": "assets/img/hero-elia-720.webp",
         "width": 720,
         "height": 1280,
-        "bytes": 77536
+        "bytes": 53836
       }
     ]
   },
   {
     "name": "portrait-elia",
-    "src": "assets/images/portelia1 (2).jpeg",
+    "src": "assets/images/Elia3.jpeg",
     "widths": [
       {
         "file": "assets/img/portrait-elia-600.webp",
         "width": 600,
         "height": 1051,
-        "bytes": 52812
+        "bytes": 42010
       },
       {
         "file": "assets/img/portrait-elia-731.webp",
         "width": 731,
         "height": 1280,
-        "bytes": 69636
+        "bytes": 54998
       }
     ]
   },
   {
     "name": "elia-desk",
-    "src": "assets/images/acceuil (2).jpeg",
+    "src": "assets/images/Elia2.jpeg",
     "widths": [
       {
         "file": "assets/img/elia-desk-600.webp",
         "width": 600,
         "height": 400,
-        "bytes": 18542
+        "bytes": 22718
       },
       {
         "file": "assets/img/elia-desk-1200.webp",
         "width": 1200,
         "height": 800,
-        "bytes": 41590
+        "bytes": 45828
       }
     ]
   },
@@ -61,13 +61,13 @@
         "file": "assets/img/elia-bio-600.webp",
         "width": 600,
         "height": 882,
-        "bytes": 43218
+        "bytes": 40810
       },
       {
         "file": "assets/img/elia-bio-720.webp",
         "width": 720,
         "height": 1058,
-        "bytes": 56960
+        "bytes": 58486
       }
     ]
   },

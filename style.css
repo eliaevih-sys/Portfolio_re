@@ -3456,6 +3456,11 @@ address {
 }
 
 /* ---------- Retour de pression (souris et tactile) ---------- */
+.pill:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
 .pill:active,
 .icon-btn:active,
 .menu-toggle:active,
