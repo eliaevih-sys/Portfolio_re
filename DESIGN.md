@@ -34,7 +34,7 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
 
 - **Le footer est un bloc de clôture cobalt plein format, après la section contact encre : une seule adresse email géante comme geste final, puis des métadonnées discrètes et un wordmark outlined ivoire. Pas de grille de liens ni de rangée d’icônes sociales.**
   Why: une clôture monochrome avec un seul geste typographique marque la fin de la lecture ; multiplier les colonnes et les pastilles sociales redonne l’aspect template que le reste de la page évite.
-  <!-- 2026-11-19: « propose autre chose pour le footer ». Vérifié par `footer-check.mjs` : fond `rgb(0, 55, 255)`, email de 30 px à 320 px et 122 px à 1440 px, 3/2/1 colonnes, zéro débordement, focus ivoire, reduced motion sans translation. -->
+  <!-- 2026-11-19: « propose autre chose pour le footer ». Vérifié par `footer-check.mjs` : fond `rgb(0, 55, 255)`, email de 30 px à 320 px et 122 px à 1440 px, 2/1 colonnes, zéro débordement, focus ivoire, reduced motion sans translation. Le numéro de téléphone n'apparaît plus dans le footer (retrait de la colonne « Appeler » sur demande de l'utilisatrice le 2026-11-20). -->
 
 ## Motion
 
