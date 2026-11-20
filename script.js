@@ -280,7 +280,10 @@
       if (finePointer) link.addEventListener("pointerenter", () => activate(index));
     });
 
-    root.addEventListener("pointerleave", () => activate(0));
+    root.addEventListener("pointerleave", () => {
+      /* Le focus clavier doit garder la main sur l'état actif. */
+      if (!root.contains(document.activeElement)) activate(0);
+    });
     root.addEventListener("focusout", (event) => {
       if (!root.contains(event.relatedTarget)) activate(0);
     });

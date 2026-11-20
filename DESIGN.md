@@ -61,3 +61,7 @@ Règles de design du portfolio d’Elia Evih. Extraites des corrections de la se
 - **Distinguer explicitement académique / concept / déployé. Ne jamais inventer de compétence, projet, résultat, prix ou article.**
   Why: la crédibilité du portfolio repose sur des labels exacts — `L3 DAS — UVCI`, et des projets comme Mairie de Bonoua, Akwaba, CaféIvoire, SunGrid ou Nourrici présentés comme académiques ou concepts.
   <!-- 2026-11-19: « garder les labels académiques/concepts intacts ; aucun skill, projet, résultat, prix ou article inventé » -->
+
+- **Ne pas afficher le numéro de téléphone dans le texte visible. WhatsApp reste un lien libellé « Écrire sur WhatsApp ».**
+  Why: l'utilisatrice a demandé le retrait du numéro du footer (2026-11-20) puis de la section Contact (2026-11-20) ; le canal reste joignable sans exposer le numéro en clair.
+  <!-- 2026-11-20: « retire mon contact dans la zone appeler du footer » ; « la section 9 contact il y a mon numero qui est affiche au niveau de whatssapp ». -->
